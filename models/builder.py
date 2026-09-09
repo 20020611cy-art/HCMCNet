@@ -45,12 +45,10 @@ class EncoderDecoder(nn.Module):
         decoder_channels = [c * 3 for c in self.channels] #[64, 128, 384, 512]
         #decoder_channels = self.channels
 
-
-        if cfg.decoder == 'UPernet':
-            logger.info('Using Upernet Decoder')
-            from .decoders.UPernet import UPerHead
-            self.decode_head = UPerHead(in_channels=decoder_channels, num_classes=cfg.num_classes, norm_layer=norm_layer,
-                                        channels=512)
+        if cfg.decoder == 'CMDecoder':
+            logger.info('Using CMDecoder')
+            from .decoders.CMDecoder4 import CMDecoder
+            self.decode_head = CMDecoder(encoder_dims=self.channels, norm_layer=norm_layer)
 
 
 
