@@ -107,13 +107,6 @@ python train.py \
 
 ## 🔧 Advanced Usage Examples
 
-### Custom Save Directory and Model Name
-```bash
-python train.py \
-    --dataset levir \
-    --root_folder /data/LEVIR-CD/train \
-    --epochs 100
-```
 
 ### Different Learning Rate Schedule
 ```bash
@@ -135,10 +128,12 @@ python train.py \
 
 ---
 
-
-
 ## 📧 Contact
 
 If you have any questions, please contact Yuan Cao at 202412640321@nuist.edu.cn
 
 ---
+
+## 📄 License
+
+This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.
